@@ -1,0 +1,220 @@
+.peg {
+    display: inline-block;
+    width: 1.1em;
+    height: 1.1em;
+    border: 1px solid #937e62;
+    border-radius: 50%;
+    background-color: white;
+
+    margin: 5px;
+    color: white;
+}
+.r {
+    background-color: #d9534f;
+    border-color: #c9302c;
+}
+.g {
+    background-color: #5cb85c;
+    border-color: #449d44;
+}
+.y {
+    background-color: #FFD700;
+    border-color: #ffd663;
+}
+
+.b {
+
+    background-color: #FF0000
+}
+
+.jumbotron {
+  text-align: center;
+  border: 1px solid #937e62;
+  background-color: #A1C4FA;
+  /*background-color: #8B4513;*/
+  position: relative;
+  
+}
+.jumbotron .btn {
+  padding: 14px 24px;
+  font-size: 21px;
+}
+
+.list {
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid #937e62;
+  background-color: #FFFC00;
+  position: relative;
+}
+
+/*.body {
+    background-image: url("http://www.webascender.com/Portals/0/Gallery/Album/21/snowman-wallpaper-800x600.jpg");
+}*/
+
+.css3-notification {
+  font-size: .8em;
+  text-align: center;
+  padding: 10px;
+  /*background-color: #111;*/
+  color: #fff;
+  /*box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .3);*/
+  text-transform: uppercase;
+  position: relative;
+  font-weight: bold;
+  
+  -webkit-animation: bounce 800ms ease-out;
+  -moz-animation: bounce 800ms ease-out;
+  -o-animation: bounce 800ms ease-out;
+  animation: bounce 800ms ease-out;
+}
+
+/* Webkit, Chrome and Safari */
+
+@-webkit-keyframes bounce {
+  0% {
+  -webkit-transform:translateY(-100%);
+    opacity: 0;
+  }
+  5% {
+    -webkit-transform:translateY(-100%);
+    opacity: 0;
+  }
+  15% {
+    -webkit-transform:translateY(0);
+    padding-bottom: 5px;
+  }
+  30% {
+    -webkit-transform:translateY(-50%);
+  }
+  40% {
+    -webkit-transform:translateY(0%);
+    padding-bottom: 6px;
+  }
+  50% {
+    -webkit-transform:translateY(-30%);
+  }
+  70% {
+    -webkit-transform:translateY(0%);
+    padding-bottom: 7px;
+  }
+  80% {
+    -webkit-transform:translateY(-15%);
+  }
+  90% {
+    -webkit-transform:translateY(0%);
+    padding-bottom: 8px;
+  }
+  95% {
+    -webkit-transform:translateY(-10%);
+  }
+  97% {
+    -webkit-transform:translateY(0%);
+    padding-bottom: 9px;
+  }
+  99% {
+    -webkit-transform:translateY(-5%);
+  }
+  100% {
+    -webkit-transform:translateY(0);
+    padding-bottom: 9px;
+    opacity: 1;
+  }
+}
+
+
+/* Custom CSS by Harsh */
+
+.input-box{
+  width:50px;
+  height:40px;
+}
+
+.custom-table div  {
+  border-top:none !important;
+}
+
+.character-box {
+  border-bottom:3px solid #999;
+  display:inline-block;
+  padding: 10px;
+  font-family: 'Tahoma';
+  font-size:28px;
+  line-height:40px;
+  margin-right:10px;
+  width:60px;
+  height:60px;
+}
+
+.input-alpha-box {
+  padding: 10px;
+  font-family: 'Tahoma';
+  font-size:26px;
+  line-height:40px;
+  border-color: red;
+}
+
+.shakeit input:hover { 
+  padding: 10px;
+  font-family: 'Tahoma';
+  font-size:28px;
+  line-height:40px;
+  border-color: red;
+  border-width: 2px;
+-webkit-animation-name: shakeit; 
+-webkit-animation-duration: 1s; 
+-webkit-animation-timing-function: linear; 
+-webkit-animation-iteration-count: infinite; 
+animation-name: shakeit; 
+animation-duration: 1s; 
+animation-timing-function: linear; 
+animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes shakeit { 
+0% { -webkit-transform: rotate(0deg) translate(2px, 1px); } 10% { -webkit-transform: rotate(2deg) translate(1px, 2px); } 20% { -webkit-transform: rotate(-2deg) translate(3px, 0px) ; } 30% { -webkit-transform: rotate(0deg) translate(0px, -2px); } 40% { -webkit-transform: rotate(-2deg) translate(-1px, 1px); } 50% { -webkit-transform: rotate(2deg) translate(1px, -2px); } 60% { -webkit-transform: rotate(0deg) translate(3px, -1px); } 70% { -webkit-transform: rotate(2deg) translate(-2px, -1px); } 80% { -webkit-transform: rotate(-2deg) translate(1px, 1px); } 90% { -webkit-transform: rotate(0deg) translate(-2px, -2px); } 100% { -webkit-transform: rotate(2deg) translate(-1px, 2px); }
+} @keyframes shakeit { 
+0% { transform: rotate(0deg) translate(2px, 1px); } 10% { transform: rotate(2deg) translate(1px, 2px); } 20% { transform: rotate(-2deg) translate(3px, 0px) ; } 30% { transform: rotate(0deg) translate(0px, -2px); } 40% { transform: rotate(-2deg) translate(-1px, 1px); } 50% { transform: rotate(2deg) translate(1px, -2px); } 60% { transform: rotate(0deg) translate(3px, -1px); } 70% { transform: rotate(2deg) translate(-2px, -1px); } 80% { transform: rotate(-2deg) translate(1px, 1px); } 90% { transform: rotate(0deg) translate(-2px, -2px); } 100% { transform: rotate(2deg) translate(-1px, 2px); }
+} 
+
+.site-footer{
+  height: 5%;
+   color : #FFF;
+   background: #000;
+   text-align: center;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+
+.snowmanImage {
+  background:url('../images/snowman.png') no-repeat;
+  width:177px;
+  height:200px;
+  position:absolute;
+  right:50px;
+  bottom:30px;
+}
+
+.wingameBox {
+  color:#FFF;
+  position:absolute !important;
+  right:195px !important;
+  bottom:40px !important; 
+}
+
+.LostGameBox {
+  color:#FFF;
+  position:absolute !important;
+  right:195px !important;
+  bottom:40px !important; 
+}
+
+.uppercaseBlueWord {
+  color:#A1C4FA;text-transform:uppercase;
+}
+
+.errorTxt {
+  text-align:center;font-size:15px;color:#d9230f;
+}

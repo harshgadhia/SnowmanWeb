@@ -1,0 +1,84 @@
+      <!doctype html>
+      <html ng-app="snowmanApp">
+      <head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta name="description" content="Snowman is a simple little guessing right word strategy game">
+          <title>Snowman</title>
+          <script src="js/jquery-1.11.2.min.js"></script>
+          <script src="/socket.io/socket.io.js"></script>
+          <link rel="stylesheet" href="css/bootstrap.min.css">
+          <link rel="stylesheet" href="css/app.css">
+          <link rel="stylesheet" href="css/animate.css">
+          <link rel="stylesheet" href="css/bubble.css">
+          <script src="bower_components/angular/angular.js"></script>
+          <script src="bower_components/angular-route/angular-route.js"></script>
+          <script src="js/angular-resource.min.js"></script>
+          <script src="bower_components/angular-socket-io/socket.js"></script>
+          <script src="js/core.js"></script>
+
+      </head>
+      <body class="body">
+      <div class="container" ng-controller="snowmanController">
+        <div class="jumbotron" align="center">
+          <div class="css3-notification">
+          <h1>
+              <span class="peg r">S</span>
+              <span class="peg g">N</span>
+              <span class="peg y">O</span>
+              <span class="peg b">W</span>
+              <span class="peg y">M</span>
+              <span class="peg g">A</span>
+              <span class="peg r">N</span>
+          </h1>
+          </div>
+          <p class="lead">Welcome to the home of Snowman, a simple little word guess strategy game!</p>
+          <a class="btn btn-primary" href="javascript:void(0);" ng-click="startGame();">Guess a word!</a>
+        </div>
+
+
+      <div ng-if="loading == true" align="center">
+        <img src="http://preloaders.net/preloaders/341/Snowman-128.gif"/>
+      </div>  
+      
+      <div ng-if="loadingComplete == true">
+      
+        <div class="snowmanImage"></div>
+
+        <div class="row animated fadeInUp" ng-if="playFurther == true">
+          <div class="col-md-12" style="text-align:center;">
+                <div ng-repeat="x in guessedWordArr track by $index" class="character-box" ng-if="playFurther == true">
+                    {{x}}
+                </div>
+          <div class="col-md-12" ng-if="winGame == false">
+            <div align="center" colspan="{{guessedWordArr.length}}" class="input-alpha-box shakeit">
+              <input type="text" maxlength="1" class="form-control input-box" ng-model="value"
+              ng-keyup="checkLetter(value)" onkeyup="this.value=''" /> Enter your Guess here!!
+            </div>
+          </div>
+          
+          <div ng-show="present == false" class="errorTxt col-md-12 animated fadeIn">
+              That was a wrong guess, {{triesLeft}} tries left.
+          </div>
+
+          </div>
+        </div>
+
+        <div class="row input-alpha-box" ng-if="LostGame == true" style="text-align:center;">
+        	<span class="triangle-right right LostGameBox">You Lost!!!</span>
+        	<span> The correct word is <span class="uppercaseBlueWord">{{correctWord}}</span>
+        </div>
+
+        <div class="row input-alpha-box" ng-if="winGame == true" style="text-align:center;">
+        	<span class="triangle-right right wingameBox">You Win!!!</span> <br/> The correct word is <span class="uppercaseBlueWord">{{correctWord}}</span>
+
+        </div>
+      </div>
+      <div class="site-footer">
+        <p>© Cal State LA, Inc. 2014</p>
+      </div>
+      </div>
+
+      </body>
+      </html>
